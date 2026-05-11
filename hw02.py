@@ -4,7 +4,9 @@ from signal import pause
 led = LED(14)
 button = Button(4)
 
+# Attach events
 button.when_pressed = led.on
 button.when_released = led.off
 
+# Wait until interrupt occurs
 pause()
